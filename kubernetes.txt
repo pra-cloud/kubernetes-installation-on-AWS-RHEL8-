@@ -1,0 +1,31 @@
+ 1.curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s  https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+2.chmod +x ./kubectl
+ 
+3.sudo mv ./kubectl /usr/local/bin/kubectl
+4.install docker
+5.  curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/            
+                                                                                                         
+
+ 
+6.minikube start --vm-driver=none
+7.yum install -y conntrack
+
+
+[docker-ce]
+name=Docker-CE Repository
+baseurl=https://download.docker.com/linux/centos/7/x86_64/stable/
+enabled=1
+gpgcheck=1
+keepcache=1
+gpgkey=https://download.docker.com/linux/centos/gpg
+
+sudo apt-get update && \
+    sudo apt-get install docker.io -y
+
+sudo apt-get install -y conntrack
+
+
+
+
+                                           
+
